@@ -45,7 +45,11 @@ module.exports = {
                     loader: 'babel-loader',
                     options: {
                         presets: ['@babel/preset-env', '@babel/preset-react'],
-                        plugins: ['@babel/plugin-transform-runtime', '@babel/plugin-transform-react-jsx', '@babel/plugin-transform-react-jsx-compat'],
+                        plugins: [
+                            '@babel/plugin-transform-runtime',
+                            '@babel/plugin-transform-react-jsx',
+                            '@babel/plugin-transform-react-jsx-compat',
+                        ],
                     },
                 },
             },
@@ -87,6 +91,14 @@ module.exports = {
                 NODE_ENV: JSON.stringify('production'),
             },
         }),
+        // TODO: 研究加入以下 plugin，另外注意有沒有 source map
+        // https://ithelp.ithome.com.tw/articles/10268059
+        // new webpack.optimize.UglifyJsPlugin({
+        //     compressor: {
+        //         warnings: false,
+        //     },
+        // }),
+        // new webpack.optimize.OccurenceOrderPlugin(),
     ],
     // resolve: {
     //   fallback: { "path": false }
