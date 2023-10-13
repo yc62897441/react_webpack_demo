@@ -62,6 +62,10 @@ module.exports = {
                 use: ['json-loader'],
                 type: 'javascript/auto',
             },
+            {
+                test: /\.(xls|xlsx)$/,
+                use: 'file-loader',
+            },
         ],
     },
     //plugins插件
