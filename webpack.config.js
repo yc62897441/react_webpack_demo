@@ -21,6 +21,9 @@ module.exports = {
         // 不要加 publicPath，配合 nginx 設定 root 根目錄路徑即為專案資料夾，靜態檔案都放在專案資料夾，在 index.html 引入 js、css 的路徑為「/main.js」、不要「/homepage/main.js」。
         // publicPath: '/homepage/',
 
+        // 此專案非為 nginx root 根目錄才需要多加，在前端專案 index.js 中也要加 basename
+        // publicPath: '/basename/',
+
         // "/signSystem/" :同網域 , "/":localhost
         //允許您為應用程序中的所有資產指定基本路徑。
     },
