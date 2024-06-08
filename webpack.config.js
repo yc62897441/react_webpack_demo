@@ -48,17 +48,17 @@ module.exports = {
                     loader: 'babel-loader',
                     options: {
                         presets: ['@babel/preset-env', '@babel/preset-react'],
-                        plugins: [
-                            '@babel/plugin-transform-runtime',
-                            '@babel/plugin-transform-react-jsx',
-                            '@babel/plugin-transform-react-jsx-compat',
-                        ],
+                        plugins: ['@babel/plugin-transform-runtime', '@babel/plugin-transform-react-jsx', '@babel/plugin-transform-react-jsx-compat'],
                     },
                 },
             },
             {
-                test: /\.(jpg|jpe?g|png|gif|svg|pdf)$/i,
+                test: /\.(jpg|jpe?g|png|gif|pdf)$/i,
                 type: 'asset/resource',
+            },
+            {
+                test: /\.svg$/,
+                use: ['@svgr/webpack'],
             },
             {
                 test: /\.json$/,

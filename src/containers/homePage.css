@@ -1,0 +1,11 @@
+svg {
+    width: 300px;
+    height: 300px;
+    color: #d3d3d3;
+    transition: color 0.5s;
+}
+
+svg:hover {
+    color: firebrick;
+    cursor: pointer;
+}
