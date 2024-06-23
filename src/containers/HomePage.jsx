@@ -5,6 +5,8 @@ import styled from 'styled-components'
 
 // 靜態資源
 import { ReactComponent as HomeIcon } from '../assets/home.svg'
+import { ReactComponent as HomeIcon2 } from '../assets/home.svg?react'
+
 import './homePage.css'
 
 // 自定義 components
@@ -13,6 +15,8 @@ function Component() {
     return (
         <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', padding: '300px' }}>
             <HomeIcon />
+            <div style={{ width: '100%', borderBottom: '1px solid #eeeeee' }} />
+            <HomeIcon2 />
         </div>
     )
 }

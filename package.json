@@ -2,7 +2,7 @@
   "homepage": ".",
   "scripts": {
     "build": "webpack --mode production",
-    "start": "SET PORT=3002 && react-scripts start",
+    "start": "react-scripts start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {

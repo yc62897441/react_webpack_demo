@@ -60,6 +60,19 @@ module.exports = {
                 test: /\.svg$/,
                 use: ['@svgr/webpack'],
             },
+            // 使用後綴查詢參數，讓不同的 loader 來處來分別處理具有/不具有後綴查詢參數的 svg 檔案
+            // {
+            //     test: /\.svg$/,
+            //     oneOf: [
+            //         {
+            //             resourceQuery: /react/, // home.svg?react
+            //             use: ['@svgr/webpack'],
+            //         },
+            //         {
+            //             use: ['file-loader'], // 預設處理方式
+            //         },
+            //     ],
+            // },
             {
                 test: /\.json$/,
                 use: ['json-loader'],
